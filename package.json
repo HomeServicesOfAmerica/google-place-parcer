@@ -1,0 +1,14 @@
+{
+  "name": "places",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-register": "^6.18.0"
+  }
+}
