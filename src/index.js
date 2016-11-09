@@ -27,9 +27,6 @@ const parseResult = (result) => {
   };
 
   const { types } = result;
-  // const addressAllParts = result.description
-  //                               .split(',')
-  //                               .map(term => term.trim());
 
   let addressNoZip;
   const searchingByPostal = types.includes('postal_code');
@@ -39,7 +36,6 @@ const parseResult = (result) => {
                          .secondary_text
                          .split(',')
                          .map(term => term.trim());
-    // addressNoZip = addressAllParts.filter(term => term !== parsed.postal);
   } else {
     addressNoZip = result.terms
                          .map(term => term.value);
@@ -57,7 +53,7 @@ const parseResult = (result) => {
   let addressNoCity;
   if (hasCity) {
     if (types.includes('sublocality')) {
-      parsed.neighborhood = addressNoCity[0];
+      parsed.neighborhood = addressNoCountry[0];
       if (addressNoCountry.length > 1) {
         parsed.city = addressNoCountry[1];
         addressNoCity = addressNoCountry.slice(2);
