@@ -200,7 +200,7 @@ const expected = [
   },
   {
     neighborhood: null,
-    city: 'Svoboda', // presumably? google says this is Ukraine's far-right party
+    city: 'Svoboda',
     county: null,
     state: "Zakarpats'ka oblast",
     postal: '90210',
