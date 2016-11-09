@@ -4,11 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "ava"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "babel-register": "^6.18.0"
+  },
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-es2016": "^6.16.0"
+  },
+  "ava": {
+    "files": [
+      "test/*.js"
+    ],
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
   }
 }
